@@ -87,7 +87,6 @@ func handlePostPosts(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// Check if the fields are present in the JSON
 	requiredFields := []string{"date", "country", "area", "activity", "injury"}
 	for _, field := range requiredFields {
 		if _, ok := bodyMap[field]; !ok {
@@ -96,7 +95,6 @@ func handlePostPosts(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 
-	// Check if there are any additional fields
 	for field := range bodyMap {
 		isRequiredField := false
 		for _, requiredField := range requiredFields {
@@ -160,7 +158,6 @@ func handlePutPost(w http.ResponseWriter, r *http.Request, id int) {
 		return
 	}
 
-	// Check if the fields are present in the JSON
 	requiredFields := []string{"date", "country", "area", "activity", "injury"}
 	for _, field := range requiredFields {
 		if _, ok := bodyMap[field]; !ok {
@@ -169,7 +166,6 @@ func handlePutPost(w http.ResponseWriter, r *http.Request, id int) {
 		}
 	}
 
-	// Check if there are any additional fields
 	for field := range bodyMap {
 		isRequiredField := false
 		for _, requiredField := range requiredFields {

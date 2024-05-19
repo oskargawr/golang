@@ -39,21 +39,19 @@ func postPosts(posts []models.Post) {
 }
 
 func main() {
-	// Load 10 random posts from the JSON file
 	posts, err := LoadRandomPosts("data/global-shark-attack.json", 10)
 	if err != nil {
 		log.Fatalf("Error loading posts: %v", err)
 	}
-	// print the posts
-	for _, post := range posts {
-		postJSON, err := json.MarshalIndent(post, "", "  ")
-		if err != nil {
-			log.Fatalf("Error marshalling post: %v", err)
-		}
-		fmt.Println(string(postJSON))
-	}
 
-	// Dodaj obsługę endpointów do serwera
+	// for _, post := range posts {
+	// 	postJSON, err := json.MarshalIndent(post, "", "  ")
+	// 	if err != nil {
+	// 		log.Fatalf("Error marshalling post: %v", err)
+	// 	}
+	// 	fmt.Println(string(postJSON))
+	// }
+
 	http.HandleFunc("/sharks", handlers.PostsHandler)
 	http.HandleFunc("/sharks/", handlers.PostHandler)
 
