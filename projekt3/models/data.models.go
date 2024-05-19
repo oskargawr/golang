@@ -8,3 +8,11 @@ type Post struct {
 	Activity *string `json:"activity"`
 	Injury   *string `json:"injury"`
 }
+
+type PostWithoutID struct {
+	Date     *string `json:"date"`
+	Country  *string `json:"country"`
+	Area     *string `json:"area"`
+	Activity *string `json:"activity"`
+	Injury   *string `json:"injury"`
+}
