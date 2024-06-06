@@ -1,0 +1,14 @@
+Header,Value
+Paradigm,"Multi-paradigm: concurrent imperative, functional[1] object-oriented[2][3]"
+Designed by,Robert GriesemerRob PikeKen Thompson[4]
+Developer,The Go Authors[5]
+First appeared,"November 10, 2009; 14 years ago (2009-11-10)"
+Stable release,"1.22.3
+   / 7 May 2024; 29 days ago (7 May 2024)"
+Typing discipline,"Inferred, static, strong,[6] structural,[7][8] nominal"
+Memory management,Garbage collection
+Implementation language,"Go, Assembly language (gc); C++ (gofrontend)"
+OS,"DragonFly BSD, FreeBSD, Linux, macOS, NetBSD, OpenBSD,[9] Plan 9,[10] Solaris, Windows"
+License,3-clause BSD[5] + patent grant[11]
+Filename extensions,.go
+Website,go.dev
